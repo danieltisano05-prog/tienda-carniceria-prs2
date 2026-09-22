@@ -2,7 +2,7 @@
 .main
 {
     grid-area: main;
-    background-color:colores.$colores-bg-dos;
+    background-color:colores.$colores-superficie;
     display: grid;
     grid-template-areas: 
     "image"
@@ -36,7 +36,7 @@
         font-family: sans-serif;
         font-size: 3rem;
         font-weight: bold;
-        color: colores.$colores-h1;
+        color: colores.$colores-texto;
         padding: 20px;
         text-align: center;
     }
@@ -55,7 +55,7 @@
                 grid-template-columns: 1fr;
                 grid-template-rows: auto 1fr;
 
-                background-color: colores.$colores-bgtres;    
+                background-color: colores.$colores-texto;    
                 border-radius: 20px;
                 padding: 1rem;       
                 margin: 0 auto; //centro el contenedor 
@@ -68,7 +68,7 @@
                     grid-area: titulo;
                     text-align: center;
                     font-size: 2rem;
-                    color:colores.$colorescateg;
+                    color:colores.$colores-texto;
                 }
                 p{
                     grid-area: parrafo;
@@ -95,7 +95,7 @@
                 grid-template-columns: 1fr;
                 grid-template-rows: auto 1fr;
 
-                background-color: colores.$colores-bgtres;    
+                background-color: colores.$colores-texto;    
                 border-radius: 20px;
                 padding: 1rem;       
                 margin: 0 auto; //centro el contenedor 
@@ -107,7 +107,7 @@
                     grid-area: titulo;
                     text-align: center;
                     font-size: 2rem;
-                    color:colores.$colorescateg;
+                    color:colores.$colores-texto;
                 }
                 p{
                     grid-area: parrafo;
@@ -135,7 +135,7 @@
                 grid-template-columns: 1fr;
                 grid-template-rows: auto 1fr;
 
-                background-color: colores.$colores-bgtres;    
+                background-color: colores.$colores-texto;    
                 border-radius: 20px;
                 padding: 1rem;       
                 margin: 0 auto; //centro el contenedor 
@@ -147,7 +147,7 @@
                     grid-area: titulo;
                     text-align: center;
                     font-size: 2rem;
-                    color:colores.$colorescateg;
+                    color:colores.$colores-texto;
                 }
                 p{
                     grid-area: parrafo;
@@ -173,7 +173,7 @@
                 grid-template-columns: 1fr;
                 grid-template-rows: auto 1fr;
 
-                background-color: colores.$colores-bgtres;    
+                background-color: colores.$colores-texto;    
                 border-radius: 20px;
                 padding: 1rem;       
                 margin: 0 auto; //centro el contenedor 
@@ -185,7 +185,7 @@
                     grid-area: titulo;
                     text-align: center;
                     font-size: 2rem;
-                    color:colores.$colorescateg;
+                    color:colores.$colores-texto;
                 }
                 p{
                     grid-area: parrafo;

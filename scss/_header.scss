@@ -1,7 +1,7 @@
 @use 'colores';
 .header
     {
-        background-color: colores.$colores-nav-uno;
+        background-color: colores.$colores-superficie;
         grid-area: header;
         
         display: flex;
@@ -27,7 +27,7 @@
             
             padding: 30px 50px 20px 20px;
             width:100%;
-            background-color: colores.$colores-nav;
+            background-color: colores.$colores-superficie;
             gap:2rem;
 
             .cate-nav
@@ -39,7 +39,7 @@
                 {
                     
                     text-decoration: none;
-                    color:white;
+                    color:colores.$colores-texto;
                 }
             }
 
@@ -49,8 +49,8 @@
                 &--log
                 {
                     text-decoration: none;
-                    color:white;
-                    border-color: colores.$colores-bg-dos;
+                    color:colores.$colores-texto;
+                    border-color: colores.$colores-texto;
                     border-style:  solid ;
                     border-radius: 10px;
                     padding: 5px 20px 5px 20px ;
@@ -59,7 +59,7 @@
             }
             &:hover 
             {
-            background-color: colores.$colorescateg;
+            background-color: colores.$colores-borde;
             
             }
         }
