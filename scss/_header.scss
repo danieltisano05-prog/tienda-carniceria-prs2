@@ -1,5 +1,5 @@
 @use 'colores';
-.header
+.header_contenedor
     {
         background-color: colores.$colores-superficie;
         grid-area: header;
@@ -9,14 +9,20 @@
         align-items: center;
         width: 100%;
 
-        .logo
+        &_a
         {   
-            margin: 10px;
-            width: 100%;           
-            max-width: 500px;   
-            height: auto;       
+            display: block;
+            width: clamp(150px, 16vw, 190px);      
         }
 
+        &_logo
+        {
+
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        
         .nadvar
         { 
             display: flex;
