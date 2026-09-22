@@ -96,9 +96,17 @@
   }
   .header__brand {
     width: 155px;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .header__login {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
   }
   .navbar {
     grid-column: 1/-1;
+    grid-row: 2;
     justify-content: flex-start;
     gap: 1.75rem;
     overflow-x: auto;
