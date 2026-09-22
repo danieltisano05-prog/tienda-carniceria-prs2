@@ -1,0 +1,62 @@
+@use 'colores';
+.footer
+    {
+        grid-area: footer;
+        width: 100%;
+        //height: 15rem;
+        background-color:colores.$colores-nav;
+        .cont-footer
+        {
+            display: flex;
+            
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin-top: 10px;
+            margin-bottom: 30px;  
+            
+            div
+            {
+                text-align: center;  
+            }
+            .p-footer
+            {
+                font-size: 18px;
+                color: colores.$colores-bgtres;
+                margin-top: 30px;
+                text-decoration: none;
+                a
+                {
+                    text-decoration: none;
+                    color:colores.$colores-bgtres;
+                }
+            }
+            .h4-style
+            {
+                color: colores.$colores-bgtres;
+                margin-bottom: 1rem;
+                font-size: 25px;
+                padding: 5px;
+                padding-bottom: 10px;
+                border-style: solid;
+                border-right: 5px;
+                border-left: 5px;
+                border-top: 5px;
+                border-color: colores.$colores-bgtres;
+            }
+        }
+        .logo-contenedor
+        {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+            .logo-footer
+            {
+                
+                width: 100%;           
+                max-width: 400px;   
+                height: auto;   
+            }
+        }  
+    }

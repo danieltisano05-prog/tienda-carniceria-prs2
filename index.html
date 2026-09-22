@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Tienda Carniceria </title>
 </head>
 <body>
-    <header>
-    <a href="index.html"><img src="/assets/logoprueba.jpg" alt="logo de la carniceria" width="200"></a>
-    <nav>   
-        <div>
-            <ul>
-                <li><a href="/pag/cat-vaca.html"><h3>Carne vacuna</h3></a></li>
-                <li><a href="/pag/cat-cerdo.html"><h3>Cerdo</h3></a></li>
-                <li><a href="/pag/cat-pollo.html"><h3>Pollo</h3></a></li>
-                <li> <a href="/pag/cat-elaborados.html"><h3>Elaborados</h3></a></li>
-            </ul>
-        </div>
-        <div>
-            <a href="/log/login.html"><h3>Inicio de secion</h3></a>
-        </div>
-        <img src="/assets/fondo1.jpg" alt="logo general de carne" width="1650" height="400">
-    </nav>
-    </header>
+    <div class="grid-container">
+        <header class="header">
+        <a href="index.html"><img class="logo" src="/assets/logoprueba.jpg" alt="logo de la carniceria" width="200"></a>
+            <nav class="nadvar">   
+            <div class="cate-nav">
+                <a class="cate-nav--a" href="/pag/cat-vaca.html"><h3>Carne vacuna</h3></a>
+                <a class="cate-nav--a" href="/pag/cat-cerdo.html"><h3>Cerdo</h3></a>
+                <a class="cate-nav--a" href="/pag/cat-pollo.html"><h3>Pollo</h3></a>
+                <a class="cate-nav--a" href="/pag/cat-elaborados.html"><h3>Elaborados</h3></a>
+            </div>
+            <div class="style-vinculo">
+            <a  class="style-vinculo--log" href="/log/login.html"><h3>Inicio de secion</h3></a>
+            </div>
+            </nav>
+        </header>
     <main>
+    <img src="/assets/fondo1.jpg" alt="logo general de carne" width="1650" height="400">
     <h1>Nuestros productos</h1>
     <div>
         <h2>Vacuna</h2>
@@ -70,19 +70,25 @@
         </div>
     </div>
     </main>
-    <footer>
-        <div>
-            <h4>Direccion</h4>
-            <h4>Email</h4>
-            <h4>ubicacion</h4>
-            <h4>Numero de telefono</h4>
-        </div>
-        <div>
-            <h4>Categorias</h4>
-        </div>
-        <div>
-            <h4>Terminos y condiciones</h4>
+    <footer class="footer">
+        <div class="cont-footer"> 
+            <div> 
+                <h4 class="h4-style">Vértigo</h4> 
+                <p class="p-footer">Moda urbana con identidad propia.</p> 
+            </div> 
+            <div> 
+                <h4 class="h4-style">Navegación</h4>
+                <p class="p-footer"><a href="index.html">Home</a></p> 
+            </div> 
+            <div> 
+                <h4 class="h4-style">Contacto</h4>
+                <p class="p-footer">Bialet Massé, Córdoba</p> 
+            </div> 
+        </div> 
+        <div class="logo-contenedor">
+        <a href="index.html"><img class="logo" src="/assets/logoprueba.jpg" alt="logo de la carniceria" width="200"></a>
         </div>
     </footer> 
+    </div>
 </body>
 </html>
