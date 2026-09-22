@@ -1,206 +1,339 @@
 @use 'colores';
-.main
-{
+
+.main {
     grid-area: main;
-    background-color:colores.$colores-bg-dos;
+    min-width: 0;
+    overflow: hidden;
+    background-color: colores.$color-fondo;
+}
+
+.hero {
+    min-height: clamp(520px, 72vh, 760px);
+    padding: clamp(4rem, 9vw, 7rem) 1.5rem;
     display: grid;
-    grid-template-areas: 
-    "image"
-    "title"
-    "vacuno"
-    "embutidos"
-    "cerdo"
-    "pollo"
-    ;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto auto;
-    width: 100%;
-    gap: 30px;   
+    place-items: center;
+    position: relative;
+    isolation: isolate;
+    color: colores.$color-blanco;
+    text-align: center;
+    background:
+        linear-gradient(rgba(25, 23, 21, 0.54), rgba(25, 23, 21, 0.68)),
+        url('../assets/fondo1.jpg') center / cover no-repeat;
 
-    .imagen-principal
-    {
-        grid-area: image;
-        width: 100%;
-        height: 60%;
-        display: flex;
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 1.25rem;
+        z-index: -1;
+        border: 1px solid rgba(colores.$color-blanco, 0.46);
+        pointer-events: none;
     }
 
-    .titulopr
-    {
-        grid-area: title;
-            
+    &__content {
+        width: min(100%, 900px);
+    }
+
+    h1 {
+        max-width: 880px;
+        margin: 0 auto;
+        font-size: clamp(2.8rem, 7vw, 6rem);
+        line-height: 1.04;
+        text-wrap: balance;
+    }
+
+    &__description {
+        max-width: 680px;
+        margin: 1.5rem auto 0;
+        color: rgba(colores.$color-blanco, 0.9);
+        font-size: clamp(1rem, 2vw, 1.25rem);
+    }
+
+    &__actions {
+        margin-top: 2.25rem;
         display: flex;
-        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
-        font-family: sans-serif;
-        font-size: 3rem;
-        font-weight: bold;
-        color: colores.$colores-h1;
-        padding: 20px;
-        text-align: center;
+        gap: 0.9rem;
+    }
+}
+
+.product-index {
+    width: min(100% - 3rem, 1280px);
+    margin: 0 auto;
+    padding: clamp(5rem, 9vw, 8rem) 0;
+    scroll-margin-top: 9rem;
+}
+
+.section-heading {
+    max-width: 720px;
+    margin-bottom: clamp(3rem, 6vw, 5rem);
+
+    h2 {
+        margin-top: 0.55rem;
+        color: colores.$color-oscuro;
+        font-size: clamp(2.4rem, 5vw, 4.5rem);
     }
 
-    .vacuno
-    {
-        grid-area: vacuno;
-        width:auto ;
-        height: auto;
-        .textos
-            {
-                display: grid;
-                grid-template-areas: 
-                "titulo"
-                "parrafo";
-                grid-template-columns: 1fr;
-                grid-template-rows: auto 1fr;
-
-                background-color: colores.$colores-bgtres;    
-                border-radius: 20px;
-                padding: 1rem;       
-                margin: 0 auto; //centro el contenedor 
-                width: 70%;
-                height: auto;
-                
-                
-                h2
-                {
-                    grid-area: titulo;
-                    text-align: center;
-                    font-size: 2rem;
-                    color:colores.$colorescateg;
-                }
-                p{
-                    grid-area: parrafo;
-                    margin: 10px;
-                    padding: 10px;
-                    text-align: justify;
-                    font-size: 20px;
-                    
-                }
-            }
+    > p:last-child {
+        max-width: 620px;
+        margin-top: 1.2rem;
+        color: colores.$color-texto-suave;
+        font-size: clamp(1rem, 1.7vw, 1.15rem);
     }
+}
 
-    .embutidos
-    {
-        grid-area: embutidos;
-        width:auto ;
-        height: auto;
-        .textos
-            {
-                display: grid;
-                grid-template-areas: 
-                "titulo"
-                "parrafo";
-                grid-template-columns: 1fr;
-                grid-template-rows: auto 1fr;
+.category-links {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border-top: 1px solid colores.$color-borde;
+    border-bottom: 1px solid colores.$color-borde;
 
-                background-color: colores.$colores-bgtres;    
-                border-radius: 20px;
-                padding: 1rem;       
-                margin: 0 auto; //centro el contenedor 
-                width: 70%;
-                height: auto;
-                
-                h2
-                {
-                    grid-area: titulo;
-                    text-align: center;
-                    font-size: 2rem;
-                    color:colores.$colorescateg;
-                }
-                p{
-                    grid-area: parrafo;
-                    margin: 10px;
-                    padding: 10px;
-                    text-align: justify;
-                    font-size: 20px;
-                    
-                }
-            }
-
-    }
-
-    .cerdo
-    {
-        grid-area: cerdo;
-        width:auto ;
-        height: auto;
-        .textos
-            {
-                display: grid;
-                grid-template-areas: 
-                "titulo"
-                "parrafo";
-                grid-template-columns: 1fr;
-                grid-template-rows: auto 1fr;
-
-                background-color: colores.$colores-bgtres;    
-                border-radius: 20px;
-                padding: 1rem;       
-                margin: 0 auto; //centro el contenedor 
-                width: 70%;
-                height: auto;
-                
-                h2
-                {
-                    grid-area: titulo;
-                    text-align: center;
-                    font-size: 2rem;
-                    color:colores.$colorescateg;
-                }
-                p{
-                    grid-area: parrafo;
-                    margin: 10px;
-                    padding: 10px;
-                    text-align: justify;
-                    font-size: 20px;
-                    
-                }
-            }
-    }
-    .pollo
-    {
-        grid-area: pollo;
-        width:auto ;
-        height: auto;
-        .textos
-            {
-                display: grid;
-                grid-template-areas: 
-                "titulo"
-                "parrafo";
-                grid-template-columns: 1fr;
-                grid-template-rows: auto 1fr;
-
-                background-color: colores.$colores-bgtres;    
-                border-radius: 20px;
-                padding: 1rem;       
-                margin: 0 auto; //centro el contenedor 
-                width: 70%;
-                height: auto;
-                
-                h2
-                {
-                    grid-area: titulo;
-                    text-align: center;
-                    font-size: 2rem;
-                    color:colores.$colorescateg;
-                }
-                p{
-                    grid-area: parrafo;
-                    margin: 10px;
-                    padding: 10px;
-                    text-align: justify;
-                    font-size: 20px;
-                    
-                }
-            }
-    }
-    .vinculos-style
-    {
+    &__item {
+        min-height: 150px;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: colores.$color-texto;
         text-decoration: none;
-        color: inherit;
+        border-right: 1px solid colores.$color-borde;
+        transition: color 180ms ease, background-color 180ms ease;
+
+        &:last-child {
+            border-right: 0;
+        }
+
+        span {
+            color: colores.$color-principal;
+            font-size: 0.73rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+        }
+
+        strong {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            font-family: 'Libre Baskerville', Georgia, serif;
+            font-size: clamp(1rem, 1.6vw, 1.25rem);
+
+            &::after {
+                content: '↘';
+                font-family: 'Montserrat', Arial, sans-serif;
+                font-weight: 400;
+            }
+        }
+
+        &:hover {
+            color: colores.$color-superficie;
+            background-color: colores.$color-principal;
+
+            span {
+                color: colores.$color-superficie;
+            }
+        }
+    }
+}
+.category-section {
+    padding: clamp(4.5rem, 8vw, 7.5rem) 0;
+    border-top: 1px solid colores.$color-borde;
+    scroll-margin-top: 9rem;
+
+    &--surface {
+        background-color: colores.$color-superficie;
     }
 
+    &__container {
+        width: min(100% - 3rem, 1280px);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: minmax(220px, 0.8fr) minmax(0, 2.2fr);
+        align-items: start;
+        gap: clamp(3rem, 7vw, 7rem);
+    }
+
+    &__intro {
+        position: sticky;
+        top: 8rem;
+
+        h2 {
+            margin-top: 0.55rem;
+            color: colores.$color-oscuro;
+            font-size: clamp(2.1rem, 4vw, 3.4rem);
+        }
+
+        > p:not(.eyebrow) {
+            margin-top: 1.15rem;
+            color: colores.$color-texto-suave;
+        }
+    }
+}
+
+.text-link {
+    width: fit-content;
+    margin-top: 1.75rem;
+    padding-bottom: 0.35rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: colores.$color-principal;
+    border-bottom: 1px solid colores.$color-principal;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    span {
+        transition: transform 180ms ease;
+    }
+
+    &:hover span {
+        transform: translateX(4px);
+    }
+}
+
+.service-strip {
+    color: colores.$color-superficie;
+    background-color: colores.$color-oscuro;
+
+    &__container {
+        width: min(100% - 3rem, 1280px);
+        margin: 0 auto;
+        padding: clamp(3.5rem, 7vw, 5.5rem) 0;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    &__item {
+        min-height: 190px;
+        padding: 0 2.5rem;
+        border-right: 1px solid rgba(colores.$color-superficie, 0.22);
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+            border-right: 0;
+        }
+
+        span {
+            color: colores.$color-acento;
+            font-size: 0.73rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+        }
+
+        h2 {
+            margin-top: 2.2rem;
+            font-size: clamp(1.25rem, 2.5vw, 1.7rem);
+        }
+
+        p {
+            max-width: 300px;
+            margin-top: 0.8rem;
+            color: rgba(colores.$color-superficie, 0.7);
+            font-size: 0.92rem;
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    .category-section {
+        &__container {
+            grid-template-columns: 1fr;
+        }
+
+        &__intro {
+            position: static;
+            max-width: 620px;
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .product-index,
+    .category-section__container,
+    .service-strip__container {
+        width: min(100% - 2rem, 1280px);
+    }
+
+    .category-links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        &__item {
+            border-bottom: 1px solid colores.$color-borde;
+
+            &:nth-child(2) {
+                border-right: 0;
+            }
+
+            &:nth-child(n + 3) {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    .service-strip {
+        &__container {
+            grid-template-columns: 1fr;
+        }
+
+        &__item {
+            min-height: auto;
+            padding: 2rem 0;
+            border-right: 0;
+            border-bottom: 1px solid rgba(colores.$color-superficie, 0.22);
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+                border-bottom: 0;
+            }
+
+            h2 {
+                margin-top: 1.25rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    .hero {
+        min-height: 560px;
+        padding-right: 1rem;
+        padding-left: 1rem;
+
+        &::after {
+            inset: 0.75rem;
+        }
+
+        &__actions {
+            align-items: stretch;
+            flex-direction: column;
+        }
+
+        .button {
+            width: 100%;
+        }
+    }
+
+    .category-links {
+        &__item {
+            min-height: 125px;
+            padding: 1.15rem;
+
+            strong {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 0.35rem;
+            }
+        }
+    }
 }
