@@ -1,0 +1,71 @@
+@use 'colores';
+.cuenta 
+{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.cuenta h1,
+.cuenta h2 {
+    margin-bottom: 2rem;
+    color: colores.$colores-texto;
+    font-size: 2.5rem;
+}
+
+.formulario {
+    padding: 2rem;
+    border: 1px solid colores.$colores-borde;
+}
+
+.campos {
+    margin-bottom: 1.5rem;
+}
+
+.campos label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: colores.$colores-texto;
+    font-weight: bold;
+}
+
+.campos input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid colores.$colores-borde;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.recordarme {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.boton {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    background-color: colores.$colores-texto;
+    color: colores.$colores-superficie;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: colores.$colores-principal-hover;
+}
+
+.labelayuda {
+    margin-top: 1.5rem;
+    color: colores.$colores-texto;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Iniciar sesion - Registrarme</title>
+</head>
+<body>
+    <div class="grid-container">
+    <header class="header_contenedor">
+            <nav class="nadvar">   
+                <div class="cate-nav">
+                    <a class="cate-nav--a" href="/page/cat-vaca.html"><h3>Carne vacuna</h3></a>
+                    <a class="cate-nav--a" href="/page/cat-cerdo.html"><h3>Cerdo</h3></a>
+                    <a class="cate-nav--a" href="/page/cat-pollo.html"><h3>Pollo</h3></a>
+                    <a class="cate-nav--a" href="/page/cat-elaborados.html"><h3>Embutidos</h3></a>
+                </div>
+                <div>
+                    <a href="index.html" class="header_a">
+                        <img  class="header_logo" src="/assets/logoprueba.jpg" alt="logo de la carniceria" width="200">
+                    </a>
+                </div>
+            <div class="style-vinculo">
+            <a  class="style-vinculo--log" href="/log/login.html"><h3>Inicio de sesion</h3></a>
+            </div>
+            </nav>
+    </header>
+    <main class="cuenta">
+        <section >
+        <h1>Iniciar sesión</h1>
+
+        <form class="formulario">
+            <div class="campos">
+                <label for="usuario">Usuario o correo electrónico</label>
+                <input type="text" id="usuario" name="usuario">
+            </div>
+
+            <div class="campos">
+                <label for="clave-login">Contraseña</label>
+                <input type="password" id="clave-login" name="clave-login">
+            </div>
+
+            <label class="recordarme">
+                <input type="checkbox" name="recordarme">
+                Recordarme
+            </label>
+
+            <button class="boton" type="button">
+                Iniciar sesión
+            </button>
+
+            <p class="labelayuda">¿Olvidaste tu contraseña?</p>
+        </form>
+    </section>
+
+    <section >
+        <h2>Registrarme</h2>
+
+        <form class="formulario">
+            <div class="campos">
+                <label for="correo-registro">Correo electrónico</label>
+                <input type="email" id="correo-registro" name="correo-registro">
+            </div>
+
+            <div class="campos">
+                <label for="clave-registro">Contraseña</label>
+                <input type="password" id="clave-registro" name="clave-registro">
+            </div>
+
+            <div class="campos">
+                <label for="clave-registro">Repetir contraseña</label>
+                <input type="password" id="clave-registro" name="clave-registro">
+            </div>
+
+            <button class="boton" type="button">
+                Registrarme
+            </button>
+        </form>
+    </section>
+
+    </main>
+    <footer class="footer" >
+            <div class="footer__container">
+                <div class="footer__brand">
+                    <p >Carnicería</p>
+                    <h2>Super Empalme</h2>
+                    <p class="footer__description">
+                        Buenos cortes, elaborados frescos y atención cercana para todos los días.
+                    </p>
+                </div>
+
+                <div class="footer__column">
+                    <h2>Navegación</h2>
+                    <ul>
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./log/login.html">Iniciar sesión</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h2>Contacto</h2>
+                    <address>
+                        Av. Argentina 130<br>
+                        Villa Santa Cruz del Lago<br>
+                        Todos los días, 9:00 a 22:00
+                    </address>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>© 2026 Super Empalme. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
