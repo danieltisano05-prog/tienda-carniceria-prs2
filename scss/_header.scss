@@ -8,34 +8,33 @@
         flex-direction:column;
         align-items: center;
         width: 100%;
-
-        &_a
-        {   
-            display: block;
-            width: clamp(150px, 16vw, 190px);      
-        }
-
-        &_logo
-        {
-
-            display: block;
-            width: 100%;
-            height: auto;
-        }
         
         .nadvar
         { 
             display: flex;
             flex-direction: row;
             justify-content:space-between;
-            align-items: center;
+            align-items:center;
             flex-wrap: wrap;
             
             padding: 30px 50px 20px 20px;
             width:100%;
             background-color: colores.$colores-superficie;
             gap:2rem;
-
+            
+            &_a
+            {   
+                display: block;
+                width: clamp(150px, 16vw, 190px);      
+            }
+    
+            &_logo
+            {
+    
+                display: block;
+                width: 100%;
+                height: auto;
+            }
             .cate-nav
             {
                 margin-right: auto;
