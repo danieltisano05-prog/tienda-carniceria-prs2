@@ -1,6 +1,7 @@
 @use 'colores';
 .main
 {
+
     grid-area: main;
     display: grid;
     grid-template-areas:
@@ -188,5 +189,25 @@
         color: inherit;
     }
 
+}
+
+.main-pag
+{
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+    "descripcion cards";
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    background-color: colores.$colores-superficie;   
+
+    .main-descripcion 
+    {
+
+    }
+    .main-cards
+    {
+
+    }
 }
     

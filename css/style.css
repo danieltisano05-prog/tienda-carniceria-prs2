@@ -192,6 +192,14 @@
   color: inherit;
 }
 
+.main-pag {
+  grid-area: main;
+  display: grid;
+  grid-template-areas: "descripcion cards";
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  background-color: #fffdf9;
+}
 .footer {
   grid-area: footer;
   background-color: #5e151a;
