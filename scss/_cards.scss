@@ -8,7 +8,8 @@
     padding: 0 1rem;
 }
 
-.card-estruc {
+.card-estruc 
+{
     display: block;
     overflow: hidden;
     background-color: colores.$colores-superficie;
@@ -33,6 +34,14 @@
     text-align: center;
 }
 
-.card-estruc:hover {
+.card-estruc:hover 
+{
     transform: translateY(-4px);
+}
+.card-text
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
 }

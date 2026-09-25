@@ -196,18 +196,25 @@
     grid-area: main;
     display: grid;
     grid-template-areas:
+    "titulo titulo "
     "descripcion cards";
     grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
     gap: 1rem;
     background-color: colores.$colores-superficie;   
 
     .main-descripcion 
     {
-
+        grid: descripcion;
     }
     .main-cards
     {
-
+        grid-area: cards;
+    }
+    .titulo-pag
+    {
+        margin-left: 2rem;
+    
     }
 }
     
